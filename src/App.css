@@ -1,17 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+html {
+  background-color: black;
+  padding: 0px 100px;
+}
+/*Header*/
+.header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.header .logo {
+  color: blueviolet;
+}
+.header input {
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 5px;
+  background: linear-gradient(90deg, rgba(11,0,195,1) 0%, rgba(213,67,190,1) 100%);
+}
+.header input:focus {
+  outline: none;
+}
+.header input::placeholder {
+  color: rgb(199, 199, 199);
+}
 
-
+/*Crypto*/
+.crypto_container .loading {
+  text-align: center;
+  padding: 30px;
+}
 .each_item {
   border-bottom: 1px solid gray;
   display: flex;
   justify-content: space-between;
 }
-.image {
-  width: 20%;
+.each_item div {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
 }
-img {
+.each_item .image {
+  width: 15%;
+  display: flex;
+}
+.each_item .image img {
   width: 40px;
   height: 40px;
+}
+.each_item .image h4 {
+  margin-left: 10px;
+}
+.each_item .symbol {
+  width: 15%;
+}
+.each_item .percentage {
+  width: 15%;
+}
+.each_item .price  {
+  width: 15%;
+}
+.each_item .market_cap {
+  width: 20%;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+
+/*Paginacija*/
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.paginationContainer a {
+  margin: 5px;
+  padding: 8px 10px;
+  font-size: 18px;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.paginationContainer a:hover {
+  background-color: white;
+  color: #0D3E10;
+}
+.paginationActive a {
+  background-color: white;
+  color: #0D3E10;
+}
+
+/*Footer*/
+.footer {
+  border-top: 1px solid white;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+.footer .colored {
+  color:  blueviolet;
+}
+
+
+@media screen and (max-width: 600px) {
+  html {
+    padding: 0px 10px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5px;
+  }
+  .header input {
+    font-size: 15px;
+    padding: 3px;
+    margin-top: 10px;
+  }
+  .each_item .image {
+   flex-direction: column;
+  }
+  .paginationContainer a {
+    margin: 3px;
+    padding: 5px 8px;
+    font-size: 15px;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+  }
+  .footer {
+    padding: 10px 5px;
+    font-size: 16px;
+  }
 }
