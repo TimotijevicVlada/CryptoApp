@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -20,6 +19,7 @@ html {
   color: blueviolet;
 }
 .header input {
+  color: white;
   border: none;
   border-radius: 5px;
   font-size: 18px;
@@ -31,9 +31,13 @@ html {
 }
 .header input::placeholder {
   color: rgb(199, 199, 199);
+  padding: 5px;
 }
 
 /*Crypto*/
+.crypto_container {
+  color: white;
+}
 .crypto_container .loading {
   text-align: center;
   padding: 30px;
@@ -90,18 +94,19 @@ html {
   margin: 5px;
   padding: 8px 10px;
   font-size: 18px;
-  color: white;
   border: 1px solid white;
   cursor: pointer;
+  color: white;
 }
 .paginationContainer a:hover {
   background-color: white;
-  color: #0D3E10;
+  color: black;
 }
 .paginationActive a {
   background-color: white;
-  color: #0D3E10;
+  color: black;
 }
+
 
 /*Footer*/
 .footer {
@@ -109,6 +114,7 @@ html {
   text-align: center;
   padding: 20px;
   font-size: 20px;
+  color: white;
 }
 .footer .colored {
   color:  blueviolet;
@@ -126,19 +132,42 @@ html {
   }
   .header input {
     font-size: 15px;
-    padding: 3px;
     margin-top: 10px;
   }
   .each_item .image {
    flex-direction: column;
   }
+  .each_item .image img {
+    width: 35px;
+    height: 35px;
+  }
+  .each_item .image h4 {
+    margin-left: 0px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 2px;
+  }
+  .each_item .symbol {
+    width: 8%;
+    font-size: 16px;
+  }
+  .each_item .percentage {
+    width: 10%;
+    font-size: 14px;
+  }
+  .each_item .price  {
+    width: 10%;
+    font-size: 14px;
+  }
+  .each_item .market_cap {
+    margin-left: 5px;
+    width: 35%;
+    font-size: 14px;
+  }
   .paginationContainer a {
     margin: 3px;
     padding: 5px 8px;
     font-size: 15px;
-    color: white;
-    border: 1px solid white;
-    cursor: pointer;
   }
   .footer {
     padding: 10px 5px;
